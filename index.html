@@ -38,14 +38,18 @@
     border: 1px solid #719bad;
     width: 98px;
     height: 98px;
-    border-radius: 2px;
+    border-radius: 10px;
     color: #719bad;
     box-shadow: 0 5px 0px #719bad;
+  }
+  li.empty.pressed {
+    margin-top: 14px;
+    box-shadow: 0 1px 0px #719bad;
   }
   li a {
     color: #ffffff;
     display: block;
-    border-radius: 2px;
+    border-radius: 10px;
     text-decoration: none;
   }
   #title {
@@ -107,13 +111,24 @@
 document.onkeydown = function (e){
   var meta_key = e.metaKey;
   console.log(meta_key);
-  var firstChild = document.getElementById(e.key.toUpperCase()).children[0];
+  var pressedKey = document.getElementById(e.key.toUpperCase());
+  var firstChild = pressedKey.children[0];
   if (firstChild) {
+    var style = firstChild.getAttribute('style');
+    firstChild.setAttribute('style', style.replace('box-shadow: 0 5px 0px', 'margin-top:4px;box-shadow: 0 1px 0px'));
+    setTimeout(function(){
+      firstChild.setAttribute('style', style.replace('margin-top:4px;box-shadow: 0 1px 0px', 'box-shadow: 0 5px 0px'));
+    }, 100);
     if (meta_key) {
       window.open(firstChild.getAttribute('href'));
     } else {
       location.href = firstChild.getAttribute('href');
     }
+  } else if (pressedKey.className === 'empty') {
+    pressedKey.className = 'empty pressed';
+    setTimeout(function(){
+      pressedKey.className = 'empty';
+    }, 100);
   }
 };
 </script>
