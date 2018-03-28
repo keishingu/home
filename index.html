@@ -10,31 +10,48 @@
   }
   ul {
     display: block;
-    width: 600px;
     margin: 0 auto;
+    height: 120px;
+    width: 1200px;
+  }
+  ul#first {
+    padding-left: 0px;
+  }
+  ul#second {
+    padding-left: 40px;
+  }
+  ul#third{
+    padding-left: 100px;
   }
   li {
     margin:10px;
+    width: 100px;
+    height: 100px;
     list-style-type: none;
     float: left;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
   }
-  li img {
+  li.empty {
+    border: 1px solid #719bad;
+    width: 98px;
+    height: 98px;
+    border-radius: 2px;
+    color: #719bad;
+  }
+  li a {
+    color: #ffffff;
     display: block;
-    height: 100px;
-    width: 100px;
-/*    -webkit-filter: grayscale(100%);
-    -webkit-transition-property: -webkit-filter;
-    -webkit-transition-duration: 0.2s;
+    border-radius: 2px;
+    text-decoration: none;
   }
-  li img:hover {
-    -webkit-filter: grayscale(0%);
-*/  }
   #title {
     background-color: #aacf53;
     color: #ffffff;
     width: 200px;
     height: 200px;
-    line-height: 150px;
+    line-height: 200px;
     text-align: center;
     font-size: 27px;
     font-family: sans-serif;
@@ -46,20 +63,43 @@
 <div id="title">
   <span>kshingu.com</span>
 </div>
-<ul>
-  <li><a target="_top" href="https://www.facebook.com/kei.shingu"><img src="icons/facebook.png" alt="facebook"></a></li>
-  <li><a target="_top" href="https://twitter.com/k_shingu"><img src="icons/twitter.png" alt="twitter"></a></li>
-  <li><a target="_top" href="https://plus.google.com/u/0/+KeiShingu"><img src="icons/googleplus.png" alt="googleplus"></a></li>
-  <li><a target="_top" href="https://ja.foursquare.com/k_shingu"><img src="icons/foursquare.png" alt="foursquare"></a></li>
-  <li><a target="_top" href="#"><img src="icons/github.png" alt="github"></a></li>
+<ul id="first">
+  <li id="Q" class="empty">Q</li>
+  <li id="W"><a style="background-color:#277699;" target="_blank" href="https://kshingu.wordpress.com/">W</a></li>
+  <li id="E"><a style="background-color:#56AE44;" target="_blank" href="http://kshingu.postach.io/">E</a></li>
+  <li id="R" class="empty">R</li>
+  <li id="T"><a style="background-color:#34AADC;" target="_blank" href="https://twitter.com/k_shingu">T</a></li>
+  <li id="Y"><a style="background-color:#CC3632;" target="_blank" href="https://www.youtube.com/channel/UCOj0p9ZlzTvgk-hpt17hBUQ">Y</a></li>
+  <li id="U" class="empty">U</li>
+  <li id="I"><a style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);" target="_blank" href="https://www.instagram.com/k_shingu/">I</a></li>
+  <li id="O" class="empty">O</li>
+  <li id="P"><a style="background-color:#C7222E;" target="_blank" href="https://www.pinterest.jp/k_shingu/">P</a></li>
 </ul>
 
-<ul>
-  <li><a target="top" href="https://www.pinterest.com/k_shingu/"><img src="icons/pinterest.png" alt="pinterest"></a></li>
-  <li><a target="top" href="https://www.instagram.com/k_shingu/"><img src="icons/instagram.png" alt="instagram"></a></li>
-  <li><a target="top" href="#"><img src="icons/wordpress.png" alt="wordpress"></a></li>
-  <li><a target="top" href="https://www.flickr.com/photos/157523222"><img src="icons/flickr.png" alt="flickr"></a></li>
-  <li><a target="top" href="https://vimeo.com/user9717856"><img src="icons/vimeo.png" alt="vimeo"></a></li>
+<ul id="second">
+  <li id="A" class="empty">A</li>
+  <li id="S"><a style="background-color:#FDA541;" target="_blank" href="https://ja.swarmapp.com/history">S</a></li>
+  <li id="D" class="empty">D</li>
+  <li id="F"><a style="background-color:#3B5A96;" target="_blank" href="https://www.facebook.com/kei.shingu">F</a></li>
+  <li id="G"><a style="background-color:#171516;" target="_blank" href="https://github.com/twol">G</a></li>
+  <li id="H" class="empty"><a style="color:#719bad;" target="_blank" href="http://twol.hatenablog.com/">H</a></li>
+  <li id="J" class="empty">J</li>
+  <li id="K" class="empty">K</li>
+  <li id="L"><a style="background-color:#127BB3;" target="_blank" href="https://www.linkedin.com/in/%E5%9C%AD-%E6%96%B0%E5%AE%AE-00548254/">L</a></li>
+  <li id="+"><a style="background-color:#CA3936;" target="_blank" href="https://plus.google.com/+KeiShingu">+</a></li>
+</ul>
+
+<ul id="third">
+  <li id="Z" class="empty">Z</li>
+  <li id="X" class="empty">X</li>
+  <li id="C" class="empty">C</li>
+  <li id="B"><a style="background-color:#1DAEEC;" target="_blank" href="https://vimeo.com/user9717856">V</a></li>
+  <li id="B"><a style="background-color:#105DFB;" target="_blank" href="https://www.behance.net/kshingu">B</a></li>
+  <li id="N" class="empty">N</li>
+  <li id="M"><a style="background-color:#26B377;" target="_blank" href="https://medium.com/@kshingu">M</a></li>
+  <li id="<" class="empty">&lt;</li>
+  <li id=">" class="empty">&gt;</li>
+  <li id="?"><a style="background-color:#1BA5DC;" target="_blank" href="http://b.hatena.ne.jp/twol/bookmark">?</a></li>
 </ul>
 
 </body>
