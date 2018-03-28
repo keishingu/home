@@ -98,14 +98,23 @@
   <li id="B"><a style="background-color:#105DFB;box-shadow: 0 5px 0px #0043e1;" target="_blank" href="https://www.behance.net/kshingu">B</a></li>
   <li id="N" class="empty">N</li>
   <li id="M"><a style="background-color:#26B377;box-shadow: 0 5px 0px #0c995d;" target="_blank" href="https://medium.com/@kshingu">M</a></li>
-  <li id="<" class="empty">&lt;</li>
-  <li id=">" class="empty">&gt;</li>
+  <li id="<" class="empty"><a style="color:#719bad;" href="#" onclick="history.back()">&lt;</a></li>
+  <li id=">" class="empty"><a style="color:#719bad;" href="#" onclick="history.forward()">&gt;</a></li>
   <li id="?"><a style="background-color:#1BA5DC;box-shadow: 0 5px 0px #018bc2;" target="_blank" href="http://b.hatena.ne.jp/twol/bookmark">?</a></li>
 </ul>
 
 <script>
 document.onkeydown = function (e){
-  document.getElementById(e.key.toUpperCase()).children[0].click();
+  var meta_key = e.metaKey;
+  console.log(meta_key);
+  var firstChild = document.getElementById(e.key.toUpperCase()).children[0];
+  if (firstChild) {
+    if (meta_key) {
+      window.open(firstChild.getAttribute('href'));
+    } else {
+      location.href = firstChild.getAttribute('href');
+    }
+  }
 };
 </script>
 
